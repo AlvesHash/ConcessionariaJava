@@ -5,4 +5,9 @@ public class Veiculo {
     String marca;
     int ano;
     double preco;
+
+    public Veiculo() {
+        
+    }
 }
+
