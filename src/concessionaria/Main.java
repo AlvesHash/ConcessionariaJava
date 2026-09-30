@@ -9,38 +9,37 @@ public class Main {
         System.out.println("Bem-vindo a concessionaria Java!");
         System.out.println("-----------------------------------");
 
-        Veiculo veiculo = new Veiculo();
-
         System.out.print("Cadastro de Veiculo\n");
         System.out.println("");
 
         System.out.print("Digite o modelo do veiculo: ");
-        veiculo.modelo = scanner.nextLine();
+        String modelo = scanner.nextLine();
 
         System.out.print("Digite a marca do veiculo: ");
-        veiculo.marca = scanner.nextLine();
+        String marca = scanner.nextLine();
 
         System.out.print("Digite o ano do veiculo: ");
-        veiculo.ano = scanner.nextInt();
+        int ano = scanner.nextInt();
 
         System.out.print("Digite o preco do veiculo: ");
-        veiculo.preco = scanner.nextDouble();
+        double preco = scanner.nextDouble();
 
         System.out.println("");
 
         System.out.println("Veiculo cadastrado com sucesso!");
         System.out.println("-----------------------------------");
 
-        System.out.println("Modelo: " + veiculo.modelo);
-        System.out.println("Marca: " + veiculo.marca);
-        System.out.println("Ano: " + veiculo.ano);
-        System.out.println("Preco: " + veiculo.preco);
+        Veiculo veiculo = new Veiculo(modelo, marca, ano, preco);
+        
+        //System.out.println("Modelo: " + veiculo.modelo);
+        //System.out.println("Marca: " + veiculo.marca);
+        //System.out.println("Ano: " + veiculo.ano);
+        //System.out.println("Preco: " + veiculo.preco);
 
+      
+
+        veiculo.exibirDados ();
         scanner.close();
 
-
-
-    
     }
-
 }
