@@ -36,9 +36,20 @@ public class Main {
         //System.out.println("Ano: " + veiculo.ano);
         //System.out.println("Preco: " + veiculo.preco);
 
-      
+        //veiculo.setModelo("Corolla");
+        //veiculo.setMarca("Toyota");
+        //veiculo.setAno(2024);
+        //veiculo.setPreco(158900);
 
-        veiculo.exibirDados ();
+        //System.out.println(veiculo.getModelo());
+        //System.out.println(veiculo.getMarca());
+        //System.out.println(veiculo.getAno());
+        //System.out.println(veiculo.getPreco());
+
+      
+        
+
+        veiculo.exibirDados();
         scanner.close();
 
     }
