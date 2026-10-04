@@ -6,6 +6,9 @@ public class Veiculo {
     private int ano;
     private double preco;
 
+    public Veiculo() {
+    }
+
     public Veiculo(String modelo, String marca, int ano, double preco) {
         this.modelo = modelo;
         this.marca = marca;
@@ -37,7 +40,7 @@ public class Veiculo {
         if (ano >= 1950) {
             this.ano = ano;
         } else {
-            System.out.println("Ano inválido. O ano deve ser maior que 1950.");
+            System.out.println("Ano inválido.");
         }
     }
 
@@ -47,18 +50,19 @@ public class Veiculo {
 
     public void setPreco(double preco) {
         if (preco > 0) {
-             this.preco = preco;
+            this.preco = preco;
         } else {
-            System.out.println("Preço inválido. O preço deve ser maior que zero.");
-         }
+            System.out.println("Preço inválido.");
+        }
     }
 
+    // Exibe os dados do veículo
     public void exibirDados() {
-        System.out.println("Modelo: " + modelo);
-        System.out.println("Marca: " + marca);
-        System.out.println("Ano: " + ano);
-        System.out.println("Preço: R$" + preco);
+        System.out.println();
+        System.out.println("DADOS DO VEÍCULO");
+        System.out.println("Modelo: " + getModelo());
+        System.out.println("Marca : " + getMarca());
+        System.out.println("Ano : " + getAno());
+        System.out.println("Preço : R$ " + getPreco());
     }
-
-    
 }

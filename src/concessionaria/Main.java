@@ -2,55 +2,43 @@ package concessionaria;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("===================================");
-        System.out.println("Bem-vindo a concessionaria Java!");
-        System.out.println("-----------------------------------");
-
-        System.out.print("Cadastro de Veiculo\n");
-        System.out.println("");
-
-        System.out.print("Digite o modelo do veiculo: ");
-        String modelo = scanner.nextLine();
-
-        System.out.print("Digite a marca do veiculo: ");
-        String marca = scanner.nextLine();
-
-        System.out.print("Digite o ano do veiculo: ");
-        int ano = scanner.nextInt();
-
-        System.out.print("Digite o preco do veiculo: ");
-        double preco = scanner.nextDouble();
+        Scanner entrada = new Scanner(System.in);
+        //Veiculo carro = new Veiculo();
+        Carro carro = new Carro();
+        
+        Carro Carro = new Carro(
+           "Corolla",
+           "Toyota",
+            2020,
+            80000.0,
+          4
+        );
 
         System.out.println("");
 
-        System.out.println("Veiculo cadastrado com sucesso!");
-        System.out.println("-----------------------------------");
+        System.out.println("CADASTRO DE VEÍCULO");
 
-        Veiculo veiculo = new Veiculo(modelo, marca, ano, preco);
-        
-        //System.out.println("Modelo: " + veiculo.modelo);
-        //System.out.println("Marca: " + veiculo.marca);
-        //System.out.println("Ano: " + veiculo.ano);
-        //System.out.println("Preco: " + veiculo.preco);
+        System.out.print("Modelo: ");
+        carro.setModelo(entrada.nextLine());
 
-        //veiculo.setModelo("Corolla");
-        //veiculo.setMarca("Toyota");
-        //veiculo.setAno(2024);
-        //veiculo.setPreco(158900);
+        System.out.print("Marca: ");
+        carro.setMarca(entrada.nextLine());
 
-        //System.out.println(veiculo.getModelo());
-        //System.out.println(veiculo.getMarca());
-        //System.out.println(veiculo.getAno());
-        //System.out.println(veiculo.getPreco());
+        System.out.print("Ano: ");
+        carro.setAno(entrada.nextInt());
 
-      
-        
+        System.out.print("Preço: ");
+        carro.setPreco(entrada.nextDouble());
 
-        veiculo.exibirDados();
-        scanner.close();
+        System.out.println("Quanto portas tem o carro?");
+        carro.setPortas(entrada.nextInt());
 
+        System.out.println();
+
+        carro.exibirDados();
+        System.out.println("Portas: " + carro.getPortas());
+        entrada.close();
     }
 }
